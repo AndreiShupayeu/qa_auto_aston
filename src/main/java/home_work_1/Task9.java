@@ -4,7 +4,6 @@ package home_work_1;
 public class Task9 {
     public static void main(String[] args) {
         String s = "искать в тексте >>--> и выводить количество в консоль  >>-->";
-
         System.out.println(findPatternInString(s, ">>-->"));
     }
 

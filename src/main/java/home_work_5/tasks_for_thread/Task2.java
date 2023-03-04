@@ -4,6 +4,7 @@ package home_work_5.tasks_for_thread;
 //Генерация данных  происходит паралельно, используется один и тот же метод
 //метод возвращает разные значения каждому из потоков
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task2 {
@@ -16,6 +17,7 @@ public class Task2 {
         for (int i = 0; i < result.length; i++) {
             result[i] = (int) (Math.random() * 10);
         }
+        System.out.println(Arrays.toString(result));
         return result;
     }
 
@@ -27,6 +29,7 @@ public class Task2 {
                     createArray();
                 }
             });
+            thread.start();
         }
     }
 }
